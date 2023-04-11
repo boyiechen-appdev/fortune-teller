@@ -1,4 +1,4 @@
-Rails.application.routes.draw do  
+Rails.application.routes.draw do
   # PART 1: EACH IN ERB
   # ===================
 
@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   # Let users visit URLs:
 
   # - /lottery/unlucky
+  get("/lottery/unlucky", { :controller => "numbers",
+                            :action => "loser" })
 
   # PART 2: R→C→A→V DEBUGGING
   # ======================
@@ -18,22 +20,22 @@ Rails.application.routes.draw do
   # get("/zodiacs/aries", { :controller =>  fire, action =>  "ram" })
   # get("/zodiacs/leo", { :controller => "fire", :action => "lion" })
   # get("/zodiacs/sagittarius" { :controller => "fire", :action => "archer" })
-  
+
   # get("/zodiacs/taurus", { :controller, "earth", :action, "bull" })
   # get("/zodiacs/virgo", { :controller => "earth", :action => "maiden" })
   # get("/zodiacs/capricorn", { :controller => "earth", :action => "goat" })
-  
+
   # get("/zodiacs/gemini", { :controller => "air", :action => "twins" })
   # get(" /zodiacs/libra", { :controller => "air", :action => "scales" })
   # get ("/zodiacs/aquarius", { :controller => "air", :action => "waterbearer" })
-  
+
   # get("/zodiacs/cancer " { :controller => "earth" :action => "crab" })
   # get("/zodiac/ scorpio", { :controller => "Water", :action => "scorpion" })
   # get("/zodiacs/pisces", { :controller => "water", :action => "fish " })
 
   # PART 3: MORE R→C→A→V PRACTICE
   # ==========================
-  
+
   # Let users visit the following URLs.
   # See the target to find out what the interface should be — then match it.
   # Follow the standard R→C→A→V procedure:
